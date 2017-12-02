@@ -7,9 +7,7 @@ def calculate_checksum2(table_row):
     """Calculate the checksum of the row"""
     for i in table_row:
         for j in table_row:
-            if i == j:
-                continue
-            if i%j == 0:
+            if i != j and i%j == 0:
                 return i/j
 
 def main():
